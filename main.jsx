@@ -12,7 +12,7 @@ const App = React.createClass({
       <TinyMCE
         content="<p>This is the initial content of the editor</p>"
         config={{
-          plugins: 'link image code lists searchreplace visualblocks hr contextmenu media paste',
+          plugins: 'link image code lists searchreplace visualblocks hr contextmenu media paste autoresize',
           toolbar: 'code styleselect bold italic bullist numlist image media link | alignleft aligncenter alignright alignjustify | hr',
           menubar: false,
           style_formats: [

@@ -69,7 +69,7 @@
 	    return _react2.default.createElement(_reactTinymce2.default, {
 	      content: '<p>This is the initial content of the editor</p>',
 	      config: {
-	        plugins: 'link image code lists searchreplace visualblocks hr contextmenu media paste',
+	        plugins: 'link image code lists searchreplace visualblocks hr contextmenu media paste autoresize',
 	        toolbar: 'code styleselect bold italic bullist numlist image media link | alignleft aligncenter alignright alignjustify | hr',
 	        menubar: false,
 	        style_formats: [{ title: 'Normal text', inline: 'p' }, { title: 'Big Heading', block: 'h1' }, { title: 'Small Heading', block: 'h2' }],
