@@ -69,7 +69,7 @@
 	    return _react2.default.createElement(_reactTinymce2.default, {
 	      content: '<p>This is the initial content of the editor</p>',
 	      config: {
-	        plugins: 'link image code lists searchreplace visualblocks hr contextmenu media paste',
+	        plugins: 'link image code lists searchreplace visualblocks hr contextmenu media paste autoresize',
 	        toolbar: 'code styleselect bold italic bullist numlist image media link | alignleft aligncenter alignright alignjustify | hr',
 	        menubar: false,
 	        style_formats: [{ title: 'Normal text', inline: 'p' }, { title: 'Big Heading', block: 'h1' }, { title: 'Small Heading', block: 'h2' }],
@@ -77,7 +77,11 @@
 	        // Allow image drag and drop
 	        // Dropped images are embedded with data uris
 	        //http://www.tinymce.com/wiki.php/Configuration:paste_data_images
-	        paste_data_images: true
+	        paste_data_images: true,
+	        automatic_uploads: true,
+	        images_upload_handler: function images_upload_handler(blobInfo, success, failure) {
+	          debugger;
+	        }
 	      },
 	      onChange: this.handleEditorChange
 	    });
