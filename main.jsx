@@ -12,8 +12,13 @@ const App = React.createClass({
       <TinyMCE
         content="<p>This is the initial content of the editor</p>"
         config={{
-          plugins: 'link image code',
-          toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+          plugins: 'link image code paste',
+          toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
+          paste_data_images: true,
+          automatic_uploads: true,
+          images_upload_handler: (blobInfo, success, failure) => {
+            debugger;
+          }
         }}
         onChange={this.handleEditorChange}
       />
