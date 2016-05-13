@@ -77,7 +77,11 @@
 	        // Allow image drag and drop
 	        // Dropped images are embedded with data uris
 	        //http://www.tinymce.com/wiki.php/Configuration:paste_data_images
-	        paste_data_images: true
+	        paste_data_images: true,
+	        automatic_uploads: true,
+	        images_upload_handler: function images_upload_handler(blobInfo, success, failure) {
+	          debugger;
+	        }
 	      },
 	      onChange: this.handleEditorChange
 	    });
